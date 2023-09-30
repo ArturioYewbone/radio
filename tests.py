@@ -1,11 +1,14 @@
 import socket
+import requests
+
 
 # Создаем серверный соксет
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # IP-адрес и порт, на котором сервер будет прослушивать подключения
-server_ip = '127.0.0.1'  # Можете использовать '0.0.0.0', чтобы прослушивать на всех интерфейсах
+server_ip = '192.168.0.1'  # Можете использовать '0.0.0.0', чтобы прослушивать на всех интерфейсах
 server_port = 8080
+
 
 # Связываем серверный соксет с IP-адресом и портом
 server_socket.bind((server_ip, server_port))
@@ -26,3 +29,4 @@ while True:
 
     # Закрытие соединения с клиентом
     client_socket.close()
+
