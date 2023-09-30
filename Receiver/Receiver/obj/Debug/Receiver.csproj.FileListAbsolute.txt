@@ -1,0 +1,15 @@
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\bin\Debug\Receiver.exe.config
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\bin\Debug\Receiver.exe
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\bin\Debug\Receiver.pdb
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\obj\Debug\Receiver.csproj.AssemblyReference.cache
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\obj\Debug\MainWindow.g.cs
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\obj\Debug\App.g.cs
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\obj\Debug\Receiver_MarkupCompile.cache
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\obj\Debug\Receiver_MarkupCompile.lref
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\obj\Debug\MainWindow.baml
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\obj\Debug\Receiver.g.resources
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\obj\Debug\Receiver.Properties.Resources.resources
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\obj\Debug\Receiver.csproj.GenerateResource.cache
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\obj\Debug\Receiver.csproj.CoreCompileInputs.cache
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\obj\Debug\Receiver.exe
+C:\Users\I\Desktop\study\net\radio\Receiver\Receiver\obj\Debug\Receiver.pdb

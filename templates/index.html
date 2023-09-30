@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Музыкальный поток</title>
+</head>
+<body>
+    <audio controls>
+        <source src="{{ url_for('audio_stream') }}" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио элемент.
+    </audio>
+</body>
+</html>
