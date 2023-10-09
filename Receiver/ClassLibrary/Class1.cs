@@ -8,8 +8,8 @@ namespace ClassLibrary
 {
     public class AudioClient
     {
-        private static string ip = "127.0.0.1";
-        private static int port = 8080;
+        private static string ip = "82.179.140.18";
+        private static int port = 45684;
         private static bool stopReceiving = false;
         static public void Start()
         {
