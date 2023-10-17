@@ -54,14 +54,17 @@ namespace ClassLibrary
                 receivingThread.Start();
                 // Ожидание нажатия пробела для остановки приема
                 Console.WriteLine("Нажмите пробел для остановки приема.");
-                while (Console.ReadKey().Key != ConsoleKey.Spacebar) { }
-                // Устанавливаем флаг остановки приема
-                stopReceiving = true;
+                while (Console.ReadKey().Key != ConsoleKey.Spacebar) {
+                    // Устанавливаем флаг остановки приема
+                    stopReceiving = true;
+                    // Ожидаем завершения потока приема
+                    receivingThread.Join();
+                    // Закрываем соксет после использования
+                    clientSocket.Close();
+                }
+                
 
-                // Ожидаем завершения потока приема
-                receivingThread.Join();
-                // Закрываем соксет после использования
-                clientSocket.Close();
+                
             }
             catch (Exception ex)
             {
