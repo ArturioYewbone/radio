@@ -5,6 +5,8 @@ using System.Net.Sockets;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
+using System.Threading;
 
 namespace ConsoleApp1
 {
@@ -12,34 +14,48 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            // Создаем сокет
-            Socket clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            int port = 45693;
+            string ip = "82.179.140.18";
+            UdpClient client = new UdpClient();
 
-            // Устанавливаем адрес и порт сервера, к которому хотим подключиться
-            string serverAddress = "82.179.140.18"; // Замените на IP-адрес или домен вашего сервера
-            int serverPort = 45127
-                сд; // Замените на порт вашего сервера
+            IPEndPoint ep = new IPEndPoint(IPAddress.Parse(ip), port);
 
-            // Создаем объект для хранения информации об удаленном сервере
-            //IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Parse(serverAddress), serverPort);
+            string sendData = "Hello World";
+            byte[] sendBytes = Encoding.ASCII.GetBytes(sendData);
 
-            try
-            {
-                // Подключаемся к серверу
-                clientSocket.Connect(serverAddress, serverPort);
-                Console.WriteLine("Успешно подключено к серверу.");
+            client.Send(sendBytes, sendBytes.Length, ep);
 
-                // В этот момент вы можете отправлять и принимать данные через сокс.
-                // Например, используйте clientSocket.Send и clientSocket.Receive.
-
-                // После завершения работы, закройте сокс.
-                clientSocket.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Ошибка при подключении к серверу: {ex.Message}");
-            }
+            Console.WriteLine("Data sent to {0}", ep.Address);
             Console.ReadLine();
+
+
+            //try
+            //{
+            //    // Создаем TCP-клиент и подключаемся к серверу по IP-адресу и порту
+            //    TcpClient client = new TcpClient("82.179.140.18", 45693); // Используйте IP-адрес и порт сервера
+
+            //    // Получаем поток для отправки и приема данных
+            //    NetworkStream stream = client.GetStream();
+
+            //    // Отправляем сообщение серверу
+            //    string message = "Привет, это клиент!";
+            //    byte[] data = Encoding.UTF8.GetBytes(message);
+            //    stream.Write(data, 0, data.Length);
+
+            //    // Получаем ответ от сервера
+            //    byte[] responseBuffer = new byte[1024];
+            //    int bytesRead = stream.Read(responseBuffer, 0, responseBuffer.Length);
+            //    string response = Encoding.UTF8.GetString(responseBuffer, 0, bytesRead);
+            //    Console.WriteLine("Получен ответ: " + response);
+
+            //    // Закрываем соединение
+            //    stream.Close();
+            //    client.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("Ошибка: " + ex.Message);
+            //}
         }
     }
 }
